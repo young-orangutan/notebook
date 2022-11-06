@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "jekyll build",
-    "test": "jekyll serve --livereload"
+    "build": "bundle exec jekyll build",
+    "test": "bundle exec jekyll serve --livereload"
   }
 }

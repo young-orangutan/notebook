@@ -12,13 +12,13 @@ layout: default
 <div class="row">
   <div class="col">
     {% if page.previous.url %}
-    <a class="prev link-unstyled" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    <a class="prev link-unstyled" href="{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
     {% else %}
     [No previous page]
     {% endif %}
     |
     {% if page.next.url %}
-    <a class="next text-right" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    <a class="next text-right" href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
     {% else %}
     [No next page]
     {% endif %}

@@ -19,7 +19,7 @@
           <ul class="btn-toggle-nav list-group fw-normal pb-1 small">
             {% assign items = chapter.items | sort: 'date' %}
             {% for item in items %}
-            <li class="list-group-item {%if page.url == item.url %} active{% endif %}"><a href="{{ item.url }}" class="link-dark d-inline-flex text-decoration-none rounded">{{ item.title
+            <li class="list-group-item {%if page.url == item.url %} active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}" class="link-dark d-inline-flex text-decoration-none rounded">{{ item.title
                 }}</a></li>
             {% endfor %}
           </ul>
