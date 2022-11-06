@@ -5,7 +5,7 @@
       <svg class="bi pe-none me-2" width="30" height="24">
         <use xlink:href="#bootstrap"></use>
       </svg>
-      <span class="fs-5 fw-semibold">Contents</span>
+      <span class="fw-semibold">Chapters</span>
     </span>
     {% assign chapters = site.posts | group_by: 'chapter' | reverse %}
     {% for chapter in chapters %}
@@ -19,7 +19,9 @@
           <ul class="btn-toggle-nav list-group fw-normal pb-1 small">
             {% assign items = chapter.items | sort: 'date' %}
             {% for item in items %}
-            <li class="list-group-item {%if page.url == item.url %} active{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}" class="link-dark d-inline-flex text-decoration-none rounded">{{ item.title
+            <li class="list-group-item {%if page.url == item.url %} active{% endif %}"><a
+                href="{{ site.baseurl }}{{ item.url }}" class="link-dark d-inline-flex text-decoration-none rounded">{{
+                item.title
                 }}</a></li>
             {% endfor %}
           </ul>
@@ -29,5 +31,6 @@
       <li class="border-top my-3"></li>
     </ul>
     {% endfor %}
+
   </div>
 </div>
