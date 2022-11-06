@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "jekyll build",
+    "test": "jekyll serve --livereload"
+  }
+}
