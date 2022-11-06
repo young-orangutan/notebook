@@ -1,14 +1,25 @@
-<nav class="navbar navbar-expand-xl">
-<div class="container-fluid">
-  <ul class="navbar-nav">
-  {% for item in site.data.topmenu %}
-  <li class="nav-item">
-    <a href="{{ item.link }}" 
-       class="nav-link{%if page.url == item.link %} active{% endif %}">
-    {{ item.name }}
-  </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="row bg-dark">
+  <div class="col"></div>
+  <div class="col-8">
+    <h1 class="text-light">A Young Orangutan's Notebook</h1>
+    <div class="top-background bg-image">
+    </div>
+  </div>
+  <div class="col"></div>
+  <div class="row bg-light">
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+
+        <ul class="navbar-nav">
+          {% for item in site.data.topmenu %}
+          <li class="nav-item">
+            <a href="{{ item.link }}" class="nav-link{%if page.url == item.link %} active{% endif %}">
+              {{ item.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
 </div>
-</nav>
